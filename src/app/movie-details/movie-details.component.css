@@ -1,0 +1,29 @@
+a {
+  i {
+    margin-right: 10px;
+  }
+}
+
+img {
+  height: 300px;
+  margin-left: -20px;
+}
+
+.font-md {
+  font-size: 1.1em;
+}
+
+table {
+  tbody {
+    th {
+      text-align: right;
+      width: 20%;
+      border-right: 1px solid white;
+    }
+  }
+}
+
+.table > :not(caption) > * > * {
+  padding: 1.2rem !important;
+  font-size: 1.1em;
+}

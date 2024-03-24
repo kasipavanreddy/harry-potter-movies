@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "../node_modules/mini.css/dist/mini-dark.min.css"; */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  background-color: #212529; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+.wrap-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+}

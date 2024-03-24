@@ -1,0 +1,51 @@
+<div class="wrap-container">
+  <h5 class="filter-header">Filters</h5>
+  <div class="filter-card d-flex align-item-center">
+    <div class="d-flex flex-fill align-items-center text-nowrap">
+      <label for="movieTitle" class="mr-4">Title</label>
+      <input
+        type="text"
+        class="form-control mr-4"
+        placeholder="Search by title"
+        id="movieTitle"
+        [(ngModel)]="titleFilter"
+        (input)="applyFilters()"
+      />
+      <label for="movieReleaseYr" class="mr-4">Release Year</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Search by release year"
+        id="movieReleaseYr"
+        [(ngModel)]="releaseYrFilter"
+        (input)="applyFilters()"
+      />
+    </div>
+  </div>
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item d-flex"
+        *ngFor="let movie of filteredMovies; index as i"
+      >
+        <span class="bullet font-weight-bold">&#8226;</span>
+        <div>
+          <div class="font-weight-bold">
+            {{ movie.title }}
+          </div>
+          <div class="d-flex font-sm">
+            <div class="pr-1">Release date: {{ movie.release_date }}</div>
+            <div class="pr-1">Budget: <span [cost]="movie.budget"></span></div>
+            <div>Duration: <span [convertTime]="movie.duration"></span></div>
+          </div>
+        </div>
+        <a
+          type="button"
+          class="btn btn-light ml-auto"
+          [routerLink]="['/movie/', movie.id]"
+          >Details</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
